@@ -3,7 +3,7 @@
 
 gl 지역에 rerun 일정이 있는 이벤트마다 runType: rerun 기준의 스테이지 보상/상점/보너스를 받아
 public/events/{uid}_rerun.json 을 만들고 src/data/allEventsMap.json 에도 병합한다.
-목록(eventIndex.ts)은 src/data/update_event_index_periods.py 가 {uid}_rerun 항목을 생성한다.
+목록(eventIndex.ts)은 scripts/update_event_index_periods.py 가 {uid}_rerun 항목을 생성한다.
 
 실행: python scripts/build_reruns.py
 """

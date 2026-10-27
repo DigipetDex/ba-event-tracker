@@ -315,7 +315,7 @@ export const LobbySelector: React.FC<LobbySelectorProps> = ({
         setConnectedFileName(file.name);
         setDirectSaveToast(`"${file.name}" 불러오기 완료!`);
         setTimeout(() => setDirectSaveToast(null), 3000);
-      } catch (err) {
+      } catch {
         alert('올바른 LobbyCharacterSelectData.save 파일이 아닙니다.');
       }
     };
@@ -344,7 +344,7 @@ export const LobbySelector: React.FC<LobbySelectorProps> = ({
       if (sortOption === 'star') return b.starGrade - a.starGrade || a.order - b.order;
       return 0;
     });
-  }, [searchQuery, filterMode, sortOption, selectedIds, recruitedIds, memorialSet]);
+  }, [currentStudents, searchQuery, filterMode, sortOption, selectedIds, recruitedIds, memorialSet]);
 
   const saveFolderPath = `%USERPROFILE%\\AppData\\LocalLow\\Nexon Games\\Blue Archive`;
   const saveFileName = `${uid.trim() || '00000000'}LobbyCharacterSelectData.save`;

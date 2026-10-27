@@ -1,0 +1,55 @@
+# 매일 baql API에서 이벤트 데이터를 새로 받아 빌드하고 GitHub Pages에 배포한다.
+# 이벤트 교체 시각(KST 11:00 = 02:00 UTC) 직후에 실행.
+name: Update data & deploy
+
+on:
+  schedule:
+    - cron: '30 2 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # 이벤트 상세/복각/목록/태그 재생성 (API 실패 시 배포 중단, 기존 사이트 유지)
+      - run: python scripts/build_events.py
+
+      - run: npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

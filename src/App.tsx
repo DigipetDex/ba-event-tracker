@@ -1,9 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
-import { CURRENT_EVENT } from './data/eventData';
-import { hasEventData, resolveInitialEventUid } from './data/liveEvent';
+import { useState, useEffect } from 'react';
+import { hasEventData, LIVE_EVENT_UID, resolveInitialEventUid } from './data/liveEvent';
 import { bonusDropAmount } from './utils/bonus';
+import { planSweeps } from './utils/sweepPlan';
 import allEventsMapRaw from './data/allEventsMap.json';
-import type { EventData, UserEventProgress, Stage } from './types';
+import type { EventData, UserEventProgress } from './types';
 import { Header } from './components/Header';
 import { StageSweepPlanCard } from './components/StageSweepPlanCard';
 import { BonusStudentSelector } from './components/BonusStudentSelector';
@@ -16,6 +16,8 @@ import { getInitialStudents, syncStudentsFromRemote } from './services/studentSy
 import { Coins, CheckCircle2 } from 'lucide-react';
 
 const ALL_EVENTS_MAP = allEventsMapRaw as unknown as Record<string, EventData>;
+// 저장된/선택 UID에 데이터가 없을 때 쓰는 기본 이벤트 (진행 중 이벤트)
+const FALLBACK_EVENT = ALL_EVENTS_MAP[LIVE_EVENT_UID];
 
 // 보유 학생 목록 기반 재화별 최대 보너스율 계산 (스트라이커 상위 4명 + 스페셜 상위 2명 = 최대 6명 파티)
 function calculateAutoBonuses(
@@ -207,35 +209,22 @@ export function App() {
     }
   }, [memorialStudentIds]);
 
-  // 선택된 이벤트 UID (로컬스토리지 복원, 기본값 '859' 람과천청)
+  // 선택된 이벤트 UID (로컬스토리지 복원, 진행 이벤트가 바뀌면 자동 전환)
   const [selectedEventUid, setSelectedEventUid] = useState<string>(resolveInitialEventUid);
 
   // 이벤트 전체 데이터 (내장된 전체 이벤트 맵에서 즉시 로드)
   const [eventData, setEventData] = useState<EventData>(() => {
     const savedUid = selectedEventUid;
-    return ALL_EVENTS_MAP[savedUid] || CURRENT_EVENT;
+    return ALL_EVENTS_MAP[savedUid] || FALLBACK_EVENT;
   });
-  const [isLoadingEvent, setIsLoadingEvent] = useState<boolean>(false);
 
-  // 이벤트 캐시 (빠른 탭 전환 및 무서버 오프라인 실행 지원)
-  const eventCacheRef = useRef<Record<string, EventData>>({
-    ...ALL_EVENTS_MAP,
-    '859': CURRENT_EVENT,
-  });
 
   // 현재 이벤트 진행 상태
   const [progress, setProgress] = useState<UserEventProgress>(() => {
     const savedUid = selectedEventUid;
-    const initialEv = ALL_EVENTS_MAP[savedUid] || CURRENT_EVENT;
+    const initialEv = ALL_EVENTS_MAP[savedUid] || FALLBACK_EVENT;
     return loadProgressForEvent(initialEv);
   });
-
-  // 초기 마운트 시 캐시에 없는 이벤트일 경우만 불러오기
-  useEffect(() => {
-    if (!eventCacheRef.current[selectedEventUid]) {
-      handleSelectEvent(selectedEventUid);
-    }
-  }, []);
 
   // '모집한 학생' 목록이 기본값으로 학생 보너스에 실시간 자동 반영
   useEffect(() => {
@@ -276,7 +265,7 @@ export function App() {
   }, [progress, eventData?.id]);
 
   // 이벤트 변경 처리 함수
-  const handleSelectEvent = async (uid: string) => {
+  const handleSelectEvent = (uid: string) => {
     if (!hasEventData(uid)) return; // 데이터 없는 이벤트는 선택 불가
     setSelectedEventUid(uid);
     try {
@@ -285,28 +274,10 @@ export function App() {
       console.error(e);
     }
 
-    // 캐시에 있으면 즉시 적용
-    if (eventCacheRef.current[uid]) {
-      const cached = eventCacheRef.current[uid];
-      setEventData(cached);
-      setProgress(loadProgressForEvent(cached, recruitedStudentIds));
-      return;
-    }
-
-    // 없으면 public/events/{uid}.json 비동기 fetch
-    try {
-      setIsLoadingEvent(true);
-      const res = await fetch(`/events/${uid}.json`);
-      if (!res.ok) throw new Error(`HTTP error ${res.status}`);
-      const data: EventData = await res.json();
-      eventCacheRef.current[uid] = data;
-      setEventData(data);
-      setProgress(loadProgressForEvent(data, recruitedStudentIds));
-    } catch (err) {
-      console.error(`Failed to load event ${uid}`, err);
-    } finally {
-      setIsLoadingEvent(false);
-    }
+    // 모든 이벤트 데이터는 번들에 내장 (hasEventData 통과 시 항상 존재)
+    const data = ALL_EVENTS_MAP[uid];
+    setEventData(data);
+    setProgress(loadProgressForEvent(data, recruitedStudentIds));
   };
 
   const event = eventData;
@@ -464,6 +435,39 @@ export function App() {
     });
   };
 
+  // 복각 이벤트: 원본 이벤트의 상점 구매 계획을 이름 기준으로 복사 (복각은 상점 ID/가격이 달라짐)
+  const originalEventUid = event.id.endsWith('_rerun') ? event.id.replace(/_rerun$/, '') : null;
+  const handleCopyOriginalPlan = () => {
+    if (!originalEventUid) return;
+    const original = ALL_EVENTS_MAP[originalEventUid];
+    let originalPurchases: Record<string, number> | null = null;
+    try {
+      const saved = localStorage.getItem(`ba_event_tracker_progress_${originalEventUid}`);
+      if (saved) originalPurchases = JSON.parse(saved).itemPurchases || null;
+    } catch (e) {
+      console.error(e);
+    }
+    if (!original || !originalPurchases) {
+      alert('원본 이벤트에 저장된 구매 계획이 없습니다.');
+      return;
+    }
+    // 같은 이름이 여러 개면 등장 순서대로 대응
+    const queues: Record<string, number[]> = {};
+    original.shopItems.forEach((it) => {
+      (queues[it.name] ||= []).push(originalPurchases![it.id] || 0);
+    });
+    const next: Record<string, number> = {};
+    let matched = 0;
+    event.shopItems.forEach((it) => {
+      const q = queues[it.name]?.shift();
+      if (q === undefined) return;
+      matched++;
+      next[it.id] = it.maxQuantity !== null ? Math.min(q, it.maxQuantity) : q;
+    });
+    if (!confirm(`원본 이벤트 구매 계획에서 ${matched}/${event.shopItems.length}개 품목을 복사할까요? (현재 구매 계획은 덮어씁니다)`)) return;
+    setProgress((prev) => ({ ...prev, itemPurchases: next }));
+  };
+
   // 전체 초기화
   const handleResetAll = () => {
     if (confirm(`'${event.name}' 이벤트의 모든 구매 목록, 보너스, 소탕 진행 상태를 초기화할까요?`)) {
@@ -485,51 +489,28 @@ export function App() {
     currencyNetRequirements[curr.id] = Math.max(0, totalRequired - owned);
   });
 
-  // 스테이지별 추천 소탕 횟수 산출
+  // 스테이지별 추천 소탕 횟수 산출 (한 스테이지가 여러 재화를 함께 주는 것까지 고려)
+  // 활성화된 스테이지 후보 (모두 꺼져있으면 전체 스테이지 대상)
+  const activeCandidates = event.stages.filter((st) => progress.activeStages[st.number] !== false);
+  const sweepPool = activeCandidates.length > 0 ? activeCandidates : event.stages;
+  const sweepPlan = planSweeps(
+    sweepPool.map((st) => {
+      const yields: Record<string, number> = {};
+      st.drops.forEach((d) => {
+        if (!event.currencies.some((c) => c.id === d.resourceUid) || d.amount <= 0) return;
+        const bonus = d.isEventCurrency ? bonusDropAmount(d.amount, progress.bonusPercents[d.resourceUid] || 0) : 0;
+        yields[d.resourceUid] = (yields[d.resourceUid] || 0) + d.amount + bonus;
+      });
+      return { number: st.number, apCost: st.apCost, yields };
+    }),
+    currencyNetRequirements
+  );
   const stageInitialRecommendedSweeps: Record<number, number> = {};
   event.stages.forEach((st) => {
-    stageInitialRecommendedSweeps[st.number] = 0;
+    stageInitialRecommendedSweeps[st.number] = sweepPlan.sweeps[st.number] || 0;
   });
-
-  // 각 재화별로 필요 수량이 남아있을 때, 이를 캘 최적의 활성 스테이지를 찾아 소탕 횟수 할당
-  event.currencies.forEach((curr) => {
-    const net = currencyNetRequirements[curr.id] || 0;
-    if (net <= 0) return;
-
-    let bestStage: Stage | null = null;
-    let bestDropPerAp = 0;
-    let bestDropPerRun = 0;
-
-    // 활성화된 스테이지 후보 (모두 꺼져있으면 전체 스테이지 대상)
-    const activeCandidates = event.stages.filter((st) => progress.activeStages[st.number] !== false);
-    const pool = activeCandidates.length > 0 ? activeCandidates : event.stages;
-
-    for (const st of pool) {
-      const dropObj = st.drops.find((d) => d.resourceUid === curr.id);
-      if (dropObj && dropObj.amount > 0) {
-        const bonusPct = progress.bonusPercents[curr.id] || 0;
-        const dropPerRun =
-          dropObj.amount + (dropObj.isEventCurrency ? bonusDropAmount(dropObj.amount, bonusPct) : 0);
-        const dropPerAp = dropPerRun / (st.apCost || 20);
-
-        if (dropPerAp > bestDropPerAp) {
-          bestDropPerAp = dropPerAp;
-          bestDropPerRun = dropPerRun;
-          bestStage = st;
-        }
-      }
-    }
-
-    if (bestStage && bestDropPerRun > 0) {
-      const stage: Stage = bestStage;
-      const sweepsNeeded = Math.ceil(net / bestDropPerRun);
-      const stageNum = stage.number;
-      stageInitialRecommendedSweeps[stageNum] = Math.max(
-        stageInitialRecommendedSweeps[stageNum] || 0,
-        sweepsNeeded
-      );
-    }
-  });
+  // 필요량이 남았지만 활성 스테이지에서 드롭되지 않는 재화 (미니게임 등 다른 경로로 획득)
+  const unfarmableCurrencyIds = new Set(sweepPlan.unfarmable);
 
   // 전체 통계 집계 (무채색 통일)
   let totalRemainingSweepsAll = 0;
@@ -625,7 +606,6 @@ export function App() {
             <EventSelectorCard
               currentEventUid={event.id}
               onSelectEvent={handleSelectEvent}
-              isLoading={isLoadingEvent}
               totalRemainingSweeps={totalRemainingSweepsAll}
               totalRemainingAp={totalRemainingApAll}
               currencies={event.currencies}
@@ -688,6 +668,14 @@ export function App() {
                               <span className="text-zinc-500">추첨/이벤트 재화</span>
                             )}
                           </div>
+                          {unfarmableCurrencyIds.has(curr.id) && (
+                            <div
+                              className="text-[10px] text-amber-400 mt-1 leading-snug"
+                              title="활성화된 스테이지에서 드롭되지 않아 소탕 계획에 포함되지 않습니다"
+                            >
+                              스테이지 미드롭 · 미니게임 등으로 {(currencyNetRequirements[curr.id] || 0).toLocaleString()}개 더 필요
+                            </div>
+                          )}
                         </div>
                       </div>
 
@@ -769,6 +757,17 @@ export function App() {
             />
 
             {/* 3. 상점 아이템 */}
+            {originalEventUid && (
+              <div className="flex justify-end -mb-2">
+                <button
+                  type="button"
+                  onClick={handleCopyOriginalPlan}
+                  className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-[#22222a] hover:bg-[#2c2c36] text-zinc-300 border border-[#2d2d38] transition cursor-pointer"
+                >
+                  원본 이벤트 구매 계획 불러오기
+                </button>
+              </div>
+            )}
             <ShopSelector
               currencies={event.currencies}
               shopItems={event.shopItems}

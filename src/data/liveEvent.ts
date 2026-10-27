@@ -9,7 +9,7 @@ export function hasEventData(uid: string): boolean {
 type Run = NonNullable<EventSummary['runs']>[number];
 
 // 이벤트의 모든 회차(최초 + 복각). runs 없으면 startAt/endAt 단일 회차로 취급
-function getRuns(ev: EventSummary): Run[] {
+export function getRuns(ev: EventSummary): Run[] {
   if (ev.runs && ev.runs.length > 0) return ev.runs;
   return ev.startAt && ev.endAt ? [{ type: 'first', startAt: ev.startAt, endAt: ev.endAt }] : [];
 }
@@ -40,6 +40,17 @@ export function getLiveEventUid(now = Date.now()): string {
 }
 
 export const LIVE_EVENT_UID = getLiveEventUid();
+
+// 남은 시간 표기 (예: "3일 4시간", "5시간 12분")
+export function formatRemaining(ms: number): string {
+  const totalMin = Math.max(0, Math.floor(ms / 60000));
+  const d = Math.floor(totalMin / 1440);
+  const h = Math.floor((totalMin % 1440) / 60);
+  const m = totalMin % 60;
+  if (d > 0) return `${d}일 ${h}시간`;
+  if (h > 0) return `${h}시간 ${m}분`;
+  return `${m}분`;
+}
 
 // 초기 선택 UID: 진행 이벤트가 바뀌었으면(새 이벤트/복각 시작) 자동으로 그쪽 선택, 아니면 저장된 선택 유지
 export function resolveInitialEventUid(): string {

@@ -24,8 +24,8 @@ OUT_DIR = os.path.join(ROOT, 'public', 'events')
 MAP_JSON = os.path.join(ROOT, 'src', 'data', 'allEventsMap.json')
 POST_STEPS = [
     'scripts/build_reruns.py',
-    'src/data/update_event_index_periods.py',
-    'src/data/embed_tags_to_index.py',
+    'scripts/update_event_index_periods.py',
+    'scripts/embed_tags_to_index.py',
 ]
 
 # 반복 소탕 시 얻는 보상 태그 (FirstClear / ThreeStar 는 1회성이므로 제외)

@@ -194,6 +194,7 @@ export const StudentManager: React.FC<StudentManagerProps> = ({
       return 0;
     });
   }, [
+    currentStudents,
     searchQuery,
     selectedBullet,
     selectedArmor,

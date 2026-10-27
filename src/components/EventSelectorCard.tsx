@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { Calendar, ChevronDown, Check, Search, Loader2, Globe, Tag } from 'lucide-react';
 import { EVENT_INDEX, type EventSummary } from '../data/eventIndex';
-import { hasEventData, isEventLive } from '../data/liveEvent';
+import { formatRemaining, getActiveRun, getRuns, hasEventData, isEventLive } from '../data/liveEvent';
 
 interface EventSelectorCardProps {
   currentEventUid: string;
@@ -21,6 +21,12 @@ export const EventSelectorCard: React.FC<EventSelectorCardProps> = ({
   currencies = [],
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  // 남은 시간/진행 상태 갱신용 현재 시각 (1분마다)
+  const [now, setNow] = useState(() => Date.now());
+  useEffect(() => {
+    const timer = setInterval(() => setNow(Date.now()), 60000);
+    return () => clearInterval(timer);
+  }, []);
   const [searchQuery, setSearchQuery] = useState('');
   const dropdownRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -28,14 +34,28 @@ export const EventSelectorCard: React.FC<EventSelectorCardProps> = ({
   const currentEvent = useMemo<EventSummary>(() => {
     return (
       EVENT_INDEX.find((e) => e.uid === currentEventUid) || {
-        uid: '859',
-        name: '람과천청',
-        period: '2026.10.13 ~ 2026.10.27',
-        startAt: '2026-10-13T02:00:00Z',
-        endAt: '2026-10-27T02:00:00Z',
+        uid: currentEventUid,
+        name: `이벤트 #${currentEventUid}`,
+        period: '',
+        startAt: null,
+        endAt: null,
       }
     );
   }, [currentEventUid]);
+
+  // 진행 상태: 진행 중(남은 시간) / 예정(시작까지) / 종료
+  const activeRun = getActiveRun(currentEvent, now);
+  const nextRun = getRuns(currentEvent)
+    .filter((r) => Date.parse(r.startAt) > now)
+    .sort((a, b) => Date.parse(a.startAt) - Date.parse(b.startAt))[0];
+  const status = activeRun
+    ? { label: `진행 중 · ${formatRemaining(Date.parse(activeRun.endAt) - now)} 남음`, cls: 'bg-emerald-500/15 text-emerald-400 border-emerald-500/40' }
+    : nextRun
+    ? { label: `예정 · ${formatRemaining(Date.parse(nextRun.startAt) - now)} 후 시작`, cls: 'bg-amber-500/15 text-amber-400 border-amber-500/40' }
+    : { label: '종료', cls: 'bg-zinc-800 text-zinc-500 border-zinc-700' };
+  // 진행 중일 때 남은 일수 기준 일 평균 필요 AP
+  const remainingDays = activeRun ? Math.max(1, Math.ceil((Date.parse(activeRun.endAt) - now) / 86400000)) : 0;
+  const dailyAp = remainingDays > 0 ? Math.ceil(totalRemainingAp / remainingDays) : 0;
 
   const filteredEvents = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
@@ -54,8 +74,6 @@ export const EventSelectorCard: React.FC<EventSelectorCardProps> = ({
       setTimeout(() => {
         searchInputRef.current?.focus();
       }, 50);
-    } else {
-      setSearchQuery('');
     }
   }, [isOpen]);
 
@@ -77,7 +95,10 @@ export const EventSelectorCard: React.FC<EventSelectorCardProps> = ({
         <button
           type="button"
           disabled={isLoading}
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => {
+            if (!isOpen) setSearchQuery('');
+            setIsOpen(!isOpen);
+          }}
           className="w-full flex items-center justify-between text-left group transition cursor-pointer disabled:opacity-50 pb-4 border-b border-[#27272a]"
         >
           <div className="flex items-center gap-3.5 min-w-0">
@@ -86,6 +107,9 @@ export const EventSelectorCard: React.FC<EventSelectorCardProps> = ({
             </h1>
             <span className="text-xs font-mono font-bold text-zinc-500 bg-[#222228] border border-[#2e2e38] px-2 py-0.5 rounded-md shrink-0">
               #{currentEvent.uid}
+            </span>
+            <span className={`text-[11px] font-bold px-2 py-0.5 rounded-md border shrink-0 ${status.cls}`}>
+              {status.label}
             </span>
             {isLoading && (
               <span className="text-xs text-blue-400 flex items-center gap-1.5 shrink-0">
@@ -261,6 +285,11 @@ export const EventSelectorCard: React.FC<EventSelectorCardProps> = ({
             <div className="text-base sm:text-lg font-black text-blue-400 tracking-tight">
               {totalRemainingAp.toLocaleString()} AP
             </div>
+            {dailyAp > 0 && (
+              <div className="text-[10px] text-zinc-400 font-medium" title="남은 기간 동안 매일 써야 하는 AP (자연 회복 하루 약 240)">
+                하루 {dailyAp.toLocaleString()} AP · {remainingDays}일
+              </div>
+            )}
           </div>
         </div>
       </div>

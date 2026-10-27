@@ -1,0 +1,2499 @@
+﻿{
+    "stages":  [
+                   {
+                       "uid":  "8592301",
+                       "stageNumber":  "1",
+                       "stageType":  "stage",
+                       "enterCostAmount":  10,
+                       "rewards":  [
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  200,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  50,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  50,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  8,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "황금 양털"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "황금 털실"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  7,
+                                           "resource":  {
+                                                            "name":  "만능 설계도 추첨 상자"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8592302",
+                       "stageNumber":  "2",
+                       "stageType":  "stage",
+                       "enterCostAmount":  10,
+                       "rewards":  [
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  200,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  100,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  8,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "고대 전지 조각"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "파손된 고대 전지"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  7,
+                                           "resource":  {
+                                                            "name":  "만능 설계도 추첨 상자"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8592303",
+                       "stageNumber":  "3",
+                       "stageType":  "stage",
+                       "enterCostAmount":  10,
+                       "rewards":  [
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  100,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  200,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  8,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "파에스토스 원반 조각"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "파손된 파에스토스 원반"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  7,
+                                           "resource":  {
+                                                            "name":  "만능 설계도 추첨 상자"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8592304",
+                       "stageNumber":  "4",
+                       "stageType":  "stage",
+                       "enterCostAmount":  10,
+                       "rewards":  [
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  300,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  12,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  3,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  3,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "님루드 렌즈 조각"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "파손된 님루드 렌즈"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  7,
+                                           "resource":  {
+                                                            "name":  "만능 설계도 추첨 상자"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8592305",
+                       "stageNumber":  "5",
+                       "stageType":  "stage",
+                       "enterCostAmount":  15,
+                       "rewards":  [
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  200,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  100,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  100,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  15,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  6,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  6,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "황금 털실"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "황금 양모"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  10,
+                                           "resource":  {
+                                                            "name":  "만능 설계도 추첨 상자"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "만능 설계도 추첨 상자"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8592306",
+                       "stageNumber":  "6",
+                       "stageType":  "stage",
+                       "enterCostAmount":  15,
+                       "rewards":  [
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  250,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  150,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  6,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  15,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  6,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "파손된 고대 전지"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "마모된 고대 전지"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  10,
+                                           "resource":  {
+                                                            "name":  "만능 설계도 추첨 상자"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "만능 설계도 추첨 상자"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8592307",
+                       "stageNumber":  "7",
+                       "stageType":  "stage",
+                       "enterCostAmount":  15,
+                       "rewards":  [
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  150,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  250,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  6,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  6,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  15,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "파손된 파에스토스 원반"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "마모된 파에스토스 원반"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  10,
+                                           "resource":  {
+                                                            "name":  "만능 설계도 추첨 상자"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "만능 설계도 추첨 상자"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8592308",
+                       "stageNumber":  "8",
+                       "stageType":  "stage",
+                       "enterCostAmount":  15,
+                       "rewards":  [
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  400,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  23,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  2,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  2,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "파손된 님루드 렌즈"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "마모된 님루드 렌즈"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  10,
+                                           "resource":  {
+                                                            "name":  "만능 설계도 추첨 상자"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "만능 설계도 추첨 상자"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8592309",
+                       "stageNumber":  "9",
+                       "stageType":  "stage",
+                       "enterCostAmount":  20,
+                       "rewards":  [
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  300,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  100,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  100,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  28,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  4,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  4,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "황금 털실"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "황금 양모"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "황금 드레스"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  14,
+                                           "resource":  {
+                                                            "name":  "만능 설계도 추첨 상자"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8592310",
+                       "stageNumber":  "10",
+                       "stageType":  "stage",
+                       "enterCostAmount":  20,
+                       "rewards":  [
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  500,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  36,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "파손된 고대 전지"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "마모된 고대 전지"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "온전한 고대 전지"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  14,
+                                           "resource":  {
+                                                            "name":  "만능 설계도 추첨 상자"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8592311",
+                       "stageNumber":  "11",
+                       "stageType":  "stage",
+                       "enterCostAmount":  20,
+                       "rewards":  [
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  500,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  36,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "파손된 파에스토스 원반"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "마모된 파에스토스 원반"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "온전한 파에스토스 원반"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  14,
+                                           "resource":  {
+                                                            "name":  "만능 설계도 추첨 상자"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8592312",
+                       "stageNumber":  "12",
+                       "stageType":  "stage",
+                       "enterCostAmount":  20,
+                       "rewards":  [
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  500,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  36,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "파손된 님루드 렌즈"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "마모된 님루드 렌즈"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  1,
+                                           "resource":  {
+                                                            "name":  "온전한 님루드 렌즈"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  14,
+                                           "resource":  {
+                                                            "name":  "만능 설계도 추첨 상자"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8591301",
+                       "stageNumber":  "1",
+                       "stageType":  "story",
+                       "enterCostAmount":  10,
+                       "rewards":  [
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  10,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8591302",
+                       "stageNumber":  "2",
+                       "stageType":  "story",
+                       "enterCostAmount":  10,
+                       "rewards":  [
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  10,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8591303",
+                       "stageNumber":  "3",
+                       "stageType":  "story",
+                       "enterCostAmount":  10,
+                       "rewards":  [
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  10,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8591304",
+                       "stageNumber":  "4",
+                       "stageType":  "story",
+                       "enterCostAmount":  10,
+                       "rewards":  [
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  10,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8591305",
+                       "stageNumber":  "5",
+                       "stageType":  "story",
+                       "enterCostAmount":  10,
+                       "rewards":  [
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  10,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8591306",
+                       "stageNumber":  "6",
+                       "stageType":  "story",
+                       "enterCostAmount":  10,
+                       "rewards":  [
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  10,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8591307",
+                       "stageNumber":  "7",
+                       "stageType":  "story",
+                       "enterCostAmount":  10,
+                       "rewards":  [
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  10,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8591308",
+                       "stageNumber":  "8",
+                       "stageType":  "story",
+                       "enterCostAmount":  10,
+                       "rewards":  [
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  10,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8591309",
+                       "stageNumber":  "9",
+                       "stageType":  "story",
+                       "enterCostAmount":  10,
+                       "rewards":  [
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  10,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8591310",
+                       "stageNumber":  "10",
+                       "stageType":  "story",
+                       "enterCostAmount":  10,
+                       "rewards":  [
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  10,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8591311",
+                       "stageNumber":  "11",
+                       "stageType":  "story",
+                       "enterCostAmount":  10,
+                       "rewards":  [
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  10,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "감사계획서"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8591312",
+                       "stageNumber":  "12",
+                       "stageType":  "story",
+                       "enterCostAmount":  10,
+                       "rewards":  [
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  10,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  20,
+                                           "resource":  {
+                                                            "name":  "시설 입장권"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "즉석 기념 포토 카드 컬렉션"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8593301",
+                       "stageNumber":  "1",
+                       "stageType":  "challenge",
+                       "enterCostAmount":  5,
+                       "rewards":  [
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8593302",
+                       "stageNumber":  "2",
+                       "stageType":  "challenge",
+                       "enterCostAmount":  5,
+                       "rewards":  [
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8593303",
+                       "stageNumber":  "3",
+                       "stageType":  "challenge",
+                       "enterCostAmount":  5,
+                       "rewards":  [
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  30,
+                                           "resource":  {
+                                                            "name":  "청휘석"
+                                                        }
+                                       }
+                                   ]
+                   },
+                   {
+                       "uid":  "8593304",
+                       "stageNumber":  "Ex",
+                       "stageType":  "challenge",
+                       "enterCostAmount":  5,
+                       "rewards":  [
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "비의서 조각"
+                                                        }
+                                       },
+                                       {
+                                           "amount":  5,
+                                           "resource":  {
+                                                            "name":  "비의서 조각"
+                                                        }
+                                       }
+                                   ]
+                   }
+               ],
+    "shopResources":  [
+                          {
+                              "uid":  "8590000",
+                              "shopAmount":  90,
+                              "resource":  {
+                                               "name":  "초급 활동 보고서",
+                                               "rarity":  1
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  1,
+                                                        "quantity":  90
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590001",
+                              "shopAmount":  70,
+                              "resource":  {
+                                               "name":  "일반 활동 보고서",
+                                               "rarity":  2
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  4,
+                                                        "quantity":  70
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590002",
+                              "shopAmount":  45,
+                              "resource":  {
+                                               "name":  "상급 활동 보고서",
+                                               "rarity":  3
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  8,
+                                                        "quantity":  45
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590003",
+                              "shopAmount":  18,
+                              "resource":  {
+                                               "name":  "최상급 활동 보고서",
+                                               "rarity":  4
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  40,
+                                                        "quantity":  18
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590004",
+                              "shopAmount":  30,
+                              "resource":  {
+                                               "name":  "기초 전술 교육 BD\n(산해경)",
+                                               "rarity":  1
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  10,
+                                                        "quantity":  30
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590005",
+                              "shopAmount":  18,
+                              "resource":  {
+                                               "name":  "일반 전술 교육 BD\n(산해경)",
+                                               "rarity":  2
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  30,
+                                                        "quantity":  18
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590006",
+                              "shopAmount":  12,
+                              "resource":  {
+                                               "name":  "상급 전술 교육 BD\n(산해경)",
+                                               "rarity":  3
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  100,
+                                                        "quantity":  12
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590007",
+                              "shopAmount":  4,
+                              "resource":  {
+                                               "name":  "최상급 전술 교육 BD\n(산해경)",
+                                               "rarity":  4
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  300,
+                                                        "quantity":  4
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590008",
+                              "shopAmount":  60,
+                              "resource":  {
+                                               "name":  "에테르 가루",
+                                               "rarity":  1
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  5,
+                                                        "quantity":  60
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590009",
+                              "shopAmount":  30,
+                              "resource":  {
+                                               "name":  "에테르 조각",
+                                               "rarity":  2
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  15,
+                                                        "quantity":  30
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590010",
+                              "shopAmount":  12,
+                              "resource":  {
+                                               "name":  "에테르 결정",
+                                               "rarity":  3
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  50,
+                                                        "quantity":  12
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590011",
+                              "shopAmount":  6,
+                              "resource":  {
+                                               "name":  "에테르 정수",
+                                               "rarity":  4
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  200,
+                                                        "quantity":  6
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590012",
+                              "shopAmount":  60,
+                              "resource":  {
+                                               "name":  "이스탄불 로켓 조각",
+                                               "rarity":  1
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  5,
+                                                        "quantity":  60
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590013",
+                              "shopAmount":  30,
+                              "resource":  {
+                                               "name":  "파손된 이스탄불 로켓",
+                                               "rarity":  2
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  15,
+                                                        "quantity":  30
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590014",
+                              "shopAmount":  12,
+                              "resource":  {
+                                               "name":  "수리된 이스탄불 로켓",
+                                               "rarity":  3
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  50,
+                                                        "quantity":  12
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590015",
+                              "shopAmount":  6,
+                              "resource":  {
+                                               "name":  "온전한 이스탄불 로켓",
+                                               "rarity":  4
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  200,
+                                                        "quantity":  6
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590016",
+                              "shopAmount":  10,
+                              "resource":  {
+                                               "name":  "자수가 놓인 손수건",
+                                               "rarity":  3
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  200,
+                                                        "quantity":  10
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590017",
+                              "shopAmount":  10,
+                              "resource":  {
+                                               "name":  "매장금의 지도",
+                                               "rarity":  3
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  200,
+                                                        "quantity":  10
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590018",
+                              "shopAmount":  1,
+                              "resource":  {
+                                               "name":  "고풍스러운 달걀 공예품",
+                                               "rarity":  4
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  300,
+                                                        "quantity":  1
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590019",
+                              "shopAmount":  1,
+                              "resource":  {
+                                               "name":  "고풍스러운 다리와 연못",
+                                               "rarity":  4
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  2000,
+                                                        "quantity":  1
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590020",
+                              "shopAmount":  null,
+                              "resource":  {
+                                               "name":  "시설 입장권",
+                                               "rarity":  1
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "감사계획서"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  5,
+                                                        "quantity":  null
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590100",
+                              "shopAmount":  180,
+                              "resource":  {
+                                               "name":  "하급 강화석",
+                                               "rarity":  1
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  1,
+                                                        "quantity":  180
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590101",
+                              "shopAmount":  95,
+                              "resource":  {
+                                               "name":  "일반 강화석",
+                                               "rarity":  2
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  2,
+                                                        "quantity":  95
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590102",
+                              "shopAmount":  30,
+                              "resource":  {
+                                               "name":  "상급 강화석",
+                                               "rarity":  3
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  8,
+                                                        "quantity":  30
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590103",
+                              "shopAmount":  12,
+                              "resource":  {
+                                               "name":  "최상급 강화석",
+                                               "rarity":  4
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  32,
+                                                        "quantity":  12
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590104",
+                              "shopAmount":  50,
+                              "resource":  {
+                                               "name":  "기초 기술 노트\n(산해경)",
+                                               "rarity":  1
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  5,
+                                                        "quantity":  50
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590105",
+                              "shopAmount":  38,
+                              "resource":  {
+                                               "name":  "일반 기술 노트\n(산해경)",
+                                               "rarity":  2
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  15,
+                                                        "quantity":  38
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590106",
+                              "shopAmount":  25,
+                              "resource":  {
+                                               "name":  "상급 기술 노트\n(산해경)",
+                                               "rarity":  3
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  50,
+                                                        "quantity":  25
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590107",
+                              "shopAmount":  15,
+                              "resource":  {
+                                               "name":  "최상급 기술 노트\n(산해경)",
+                                               "rarity":  4
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  200,
+                                                        "quantity":  15
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590108",
+                              "shopAmount":  60,
+                              "resource":  {
+                                               "name":  "머리가 자라는 인형 조각",
+                                               "rarity":  1
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  5,
+                                                        "quantity":  60
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590109",
+                              "shopAmount":  30,
+                              "resource":  {
+                                               "name":  "파손된 머리가 자라는 인형",
+                                               "rarity":  2
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  15,
+                                                        "quantity":  30
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590110",
+                              "shopAmount":  12,
+                              "resource":  {
+                                               "name":  "수리된 머리가 자라는 인형",
+                                               "rarity":  3
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  50,
+                                                        "quantity":  12
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590111",
+                              "shopAmount":  6,
+                              "resource":  {
+                                               "name":  "온전한 머리가 자라는 인형",
+                                               "rarity":  4
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  200,
+                                                        "quantity":  6
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590112",
+                              "shopAmount":  60,
+                              "resource":  {
+                                               "name":  "로혼치 사본 페이지",
+                                               "rarity":  1
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  5,
+                                                        "quantity":  60
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590113",
+                              "shopAmount":  30,
+                              "resource":  {
+                                               "name":  "훼손된 로혼치 사본",
+                                               "rarity":  2
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  15,
+                                                        "quantity":  30
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590114",
+                              "shopAmount":  12,
+                              "resource":  {
+                                               "name":  "편집된 로혼치 사본",
+                                               "rarity":  3
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  50,
+                                                        "quantity":  12
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590115",
+                              "shopAmount":  6,
+                              "resource":  {
+                                               "name":  "온전한 로혼치 사본",
+                                               "rarity":  4
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  200,
+                                                        "quantity":  6
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590116",
+                              "shopAmount":  10,
+                              "resource":  {
+                                               "name":  "두뇌개발용 퍼즐 큐브",
+                                               "rarity":  3
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  200,
+                                                        "quantity":  10
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590117",
+                              "shopAmount":  10,
+                              "resource":  {
+                                               "name":  "피부까지 투명해지는 BB크림",
+                                               "rarity":  3
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  200,
+                                                        "quantity":  10
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590118",
+                              "shopAmount":  1,
+                              "resource":  {
+                                               "name":  "영양가득 종합 비타민 젤리",
+                                               "rarity":  4
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  300,
+                                                        "quantity":  1
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590119",
+                              "shopAmount":  1,
+                              "resource":  {
+                                               "name":  "비경 모형 풀장",
+                                               "rarity":  4
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  2000,
+                                                        "quantity":  1
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590120",
+                              "shopAmount":  null,
+                              "resource":  {
+                                               "name":  "크레딧 포인트",
+                                               "rarity":  1
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "시설 입장권"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  5,
+                                                        "quantity":  null
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590200",
+                              "shopAmount":  1,
+                              "resource":  {
+                                               "name":  "청휘석",
+                                               "rarity":  1
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "선물용 특산 계화과"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  40,
+                                                        "quantity":  1
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590201",
+                              "shopAmount":  20,
+                              "resource":  {
+                                               "name":  "엘리그마",
+                                               "rarity":  1
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "선물용 특산 계화과"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  2,
+                                                        "quantity":  20
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590202",
+                              "shopAmount":  1,
+                              "resource":  {
+                                               "name":  "비의서",
+                                               "rarity":  4
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "선물용 특산 계화과"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  20,
+                                                        "quantity":  1
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590203",
+                              "shopAmount":  5,
+                              "resource":  {
+                                               "name":  "크레딧 포인트",
+                                               "rarity":  1
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "선물용 특산 계화과"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  5,
+                                                        "quantity":  5
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590204",
+                              "shopAmount":  10,
+                              "resource":  {
+                                               "name":  "크레딧 포인트",
+                                               "rarity":  1
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "선물용 특산 계화과"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  3,
+                                                        "quantity":  10
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590205",
+                              "shopAmount":  25,
+                              "resource":  {
+                                               "name":  "크레딧 포인트",
+                                               "rarity":  1
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "선물용 특산 계화과"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  1,
+                                                        "quantity":  25
+                                                    }
+                                                ]
+                          },
+                          {
+                              "uid":  "8590206",
+                              "shopAmount":  null,
+                              "resource":  {
+                                               "name":  "크레딧 포인트",
+                                               "rarity":  1
+                                           },
+                              "paymentResource":  {
+                                                      "name":  "선물용 특산 계화과"
+                                                  },
+                              "purchaseTiers":  [
+                                                    {
+                                                        "unitPrice":  1,
+                                                        "quantity":  null
+                                                    }
+                                                ]
+                          }
+                      ],
+    "bonuses":  [
+                    {
+                        "percentage":  "0.25",
+                        "resource":  {
+                                         "name":  "즉석 기념 포토 카드 컬렉션"
+                                     },
+                        "student":  {
+                                        "name":  "키사키(수영복)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.25",
+                        "resource":  {
+                                         "name":  "감사계획서"
+                                     },
+                        "student":  {
+                                        "name":  "키사키(수영복)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.25",
+                        "resource":  {
+                                         "name":  "즉석 기념 포토 카드 컬렉션"
+                                     },
+                        "student":  {
+                                        "name":  "슌(수영복)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.25",
+                        "resource":  {
+                                         "name":  "시설 입장권"
+                                     },
+                        "student":  {
+                                        "name":  "슌(수영복)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "즉석 기념 포토 카드 컬렉션"
+                                     },
+                        "student":  {
+                                        "name":  "루미"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "감사계획서"
+                                     },
+                        "student":  {
+                                        "name":  "루미"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "즉석 기념 포토 카드 컬렉션"
+                                     },
+                        "student":  {
+                                        "name":  "미나"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "시설 입장권"
+                                     },
+                        "student":  {
+                                        "name":  "미나"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "감사계획서"
+                                     },
+                        "student":  {
+                                        "name":  "코코나"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "시설 입장권"
+                                     },
+                        "student":  {
+                                        "name":  "코코나"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "즉석 기념 포토 카드 컬렉션"
+                                     },
+                        "student":  {
+                                        "name":  "키사키"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "감사계획서"
+                                     },
+                        "student":  {
+                                        "name":  "키사키"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "즉석 기념 포토 카드 컬렉션"
+                                     },
+                        "student":  {
+                                        "name":  "슌"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "감사계획서"
+                                     },
+                        "student":  {
+                                        "name":  "슌"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "즉석 기념 포토 카드 컬렉션"
+                                     },
+                        "student":  {
+                                        "name":  "슌(어린이)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "시설 입장권"
+                                     },
+                        "student":  {
+                                        "name":  "슌(어린이)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "감사계획서"
+                                     },
+                        "student":  {
+                                        "name":  "사야"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "시설 입장권"
+                                     },
+                        "student":  {
+                                        "name":  "사야"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "즉석 기념 포토 카드 컬렉션"
+                                     },
+                        "student":  {
+                                        "name":  "사야(사복)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "시설 입장권"
+                                     },
+                        "student":  {
+                                        "name":  "사야(사복)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "감사계획서"
+                                     },
+                        "student":  {
+                                        "name":  "레이죠"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "시설 입장권"
+                                     },
+                        "student":  {
+                                        "name":  "레이죠"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "감사계획서"
+                                     },
+                        "student":  {
+                                        "name":  "체리노"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.1",
+                        "resource":  {
+                                         "name":  "시설 입장권"
+                                     },
+                        "student":  {
+                                        "name":  "체리노"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.1",
+                        "resource":  {
+                                         "name":  "감사계획서"
+                                     },
+                        "student":  {
+                                        "name":  "체리노(온천)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "시설 입장권"
+                                     },
+                        "student":  {
+                                        "name":  "체리노(온천)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.1",
+                        "resource":  {
+                                         "name":  "즉석 기념 포토 카드 컬렉션"
+                                     },
+                        "student":  {
+                                        "name":  "토모에"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "시설 입장권"
+                                     },
+                        "student":  {
+                                        "name":  "토모에"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "즉석 기념 포토 카드 컬렉션"
+                                     },
+                        "student":  {
+                                        "name":  "토모에(치파오)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.1",
+                        "resource":  {
+                                         "name":  "시설 입장권"
+                                     },
+                        "student":  {
+                                        "name":  "토모에(치파오)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "즉석 기념 포토 카드 컬렉션"
+                                     },
+                        "student":  {
+                                        "name":  "마리나"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.1",
+                        "resource":  {
+                                         "name":  "감사계획서"
+                                     },
+                        "student":  {
+                                        "name":  "마리나"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.1",
+                        "resource":  {
+                                         "name":  "즉석 기념 포토 카드 컬렉션"
+                                     },
+                        "student":  {
+                                        "name":  "마리나(치파오)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "감사계획서"
+                                     },
+                        "student":  {
+                                        "name":  "마리나(치파오)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.1",
+                        "resource":  {
+                                         "name":  "감사계획서"
+                                     },
+                        "student":  {
+                                        "name":  "이부키"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "시설 입장권"
+                                     },
+                        "student":  {
+                                        "name":  "이부키"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "감사계획서"
+                                     },
+                        "student":  {
+                                        "name":  "마코토"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.1",
+                        "resource":  {
+                                         "name":  "시설 입장권"
+                                     },
+                        "student":  {
+                                        "name":  "마코토"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.1",
+                        "resource":  {
+                                         "name":  "즉석 기념 포토 카드 컬렉션"
+                                     },
+                        "student":  {
+                                        "name":  "이로하"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "감사계획서"
+                                     },
+                        "student":  {
+                                        "name":  "이로하"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.1",
+                        "resource":  {
+                                         "name":  "즉석 기념 포토 카드 컬렉션"
+                                     },
+                        "student":  {
+                                        "name":  "시즈코(수영복)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "시설 입장권"
+                                     },
+                        "student":  {
+                                        "name":  "시즈코(수영복)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "즉석 기념 포토 카드 컬렉션"
+                                     },
+                        "student":  {
+                                        "name":  "츠루기(수영복)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.1",
+                        "resource":  {
+                                         "name":  "시설 입장권"
+                                     },
+                        "student":  {
+                                        "name":  "츠루기(수영복)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "즉석 기념 포토 카드 컬렉션"
+                                     },
+                        "student":  {
+                                        "name":  "아야네(수영복)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.1",
+                        "resource":  {
+                                         "name":  "감사계획서"
+                                     },
+                        "student":  {
+                                        "name":  "아야네(수영복)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "즉석 기념 포토 카드 컬렉션"
+                                     },
+                        "student":  {
+                                        "name":  "이즈미(수영복)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.1",
+                        "resource":  {
+                                         "name":  "감사계획서"
+                                     },
+                        "student":  {
+                                        "name":  "이즈미(수영복)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.15",
+                        "resource":  {
+                                         "name":  "감사계획서"
+                                     },
+                        "student":  {
+                                        "name":  "미유(수영복)"
+                                    }
+                    },
+                    {
+                        "percentage":  "0.1",
+                        "resource":  {
+                                         "name":  "시설 입장권"
+                                     },
+                        "student":  {
+                                        "name":  "미유(수영복)"
+                                    }
+                    }
+                ]
+}

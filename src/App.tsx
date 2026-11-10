@@ -3,7 +3,7 @@ import { hasEventData, LIVE_EVENT_UID, resolveInitialEventUid } from './data/liv
 import { bonusDropAmount } from './utils/bonus';
 import { planSweeps } from './utils/sweepPlan';
 import allEventsMapRaw from './data/allEventsMap.json';
-import type { EventData, UserEventProgress } from './types';
+import type { EventData, ShopItem, UserEventProgress } from './types';
 import { Header } from './components/Header';
 import { StageSweepPlanCard } from './components/StageSweepPlanCard';
 import { BonusStudentSelector } from './components/BonusStudentSelector';
@@ -64,6 +64,13 @@ function calculateMaxPossibleBonuses(event: EventData): Record<string, number> {
   return calculateAutoBonuses(event, allStudentUids);
 }
 
+// 상점 기본 최대 선택 제외 대상: 활동 보고서, 전술 교육 BD, 크레딧 포인트, 하급/일반/상급 강화석
+const DEFAULT_EXCLUDED_ITEM = /활동 보고서|전술 교육\s*BD|기술 노트|^크레딧 포인트$|^(하급|일반|상급) 강화석$/;
+function isDefaultMaxShopItem(item: ShopItem): boolean {
+  const name = item.name.replace(/\s+/g, ' ').trim();
+  return !DEFAULT_EXCLUDED_ITEM.test(name);
+}
+
 // 특정 이벤트의 기본 프로그레스 상태 생성 (모집한 학생 목록 기반 자동 반영)
 function getDefaultProgressForEvent(ev: EventData, recruitedStudentIds?: number[]): UserEventProgress {
   let recruitedIds = recruitedStudentIds;
@@ -85,8 +92,8 @@ function getDefaultProgressForEvent(ev: EventData, recruitedStudentIds?: number[
   const initialBonuses = calculateAutoBonuses(ev, defaultOwnedStudents);
 
   const initialPurchases: Record<string, number> = {};
-  ev.shopItems.forEach((item, index) => {
-    if (index < 20 && item.maxQuantity !== null) {
+  ev.shopItems.forEach((item) => {
+    if (item.maxQuantity !== null && isDefaultMaxShopItem(item)) {
       initialPurchases[item.id] = item.maxQuantity;
     }
   });

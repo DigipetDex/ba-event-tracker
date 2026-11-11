@@ -207,6 +207,15 @@ export function App() {
     return [];
   });
 
+  // 모집 학생 목록 로컬스토리지 자동 저장
+  useEffect(() => {
+    try {
+      localStorage.setItem('ba_recruited_students', JSON.stringify(recruitedStudentIds));
+    } catch (e) {
+      console.error('Failed to save recruited students', e);
+    }
+  }, [recruitedStudentIds]);
+
   // 메모리얼 학생 목록 로컬스토리지 자동 저장
   useEffect(() => {
     try {

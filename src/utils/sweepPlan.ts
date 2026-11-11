@@ -65,5 +65,76 @@ export function planSweeps(stages: SweepStage[], need: Record<string, number>): 
       }
     });
 
-  return { sweeps, unfarmable };
+  return { sweeps: optimizeSweeps(stages, farmable, need, sweeps), unfarmable };
+}
+
+const apOf = (st: SweepStage) => st.apCost || 20;
+const totalAp = (stages: SweepStage[], sweeps: Record<number, number>) =>
+  stages.reduce((sum, st) => sum + (sweeps[st.number] || 0) * apOf(st), 0);
+
+// 정수 최적화: 총 AP 최소 (branch & bound). greedy 결과를 초기 상한으로 사용, 노드 제한 초과 시 현재 최선 반환
+function optimizeSweeps(
+  stages: SweepStage[],
+  targets: string[],
+  need: Record<string, number>,
+  seed: Record<number, number>
+): Record<number, number> {
+  if (targets.length === 0) return seed;
+
+  // 대상 재화를 하나라도 주는 스테이지만, 최고 효율(AP/획득량) 순
+  const ratio = (st: SweepStage) => Math.min(...targets.filter((c) => (st.yields[c] || 0) > 0).map((c) => apOf(st) / st.yields[c]));
+  const cand = stages
+    .filter((st) => targets.some((c) => (st.yields[c] || 0) > 0))
+    .sort((a, b) => ratio(a) - ratio(b));
+  const n = cand.length;
+
+  // minRatio[i][k]: i번째 이후 스테이지 중 재화 k의 최소 AP/획득량 (하한 계산용)
+  const minRatio: number[][] = Array.from({ length: n + 1 }, () => targets.map(() => Infinity));
+  for (let i = n - 1; i >= 0; i--) {
+    targets.forEach((c, k) => {
+      const y = cand[i].yields[c] || 0;
+      minRatio[i][k] = Math.min(minRatio[i + 1][k], y > 0 ? apOf(cand[i]) / y : Infinity);
+    });
+  }
+
+  let bestAp = totalAp(stages, seed);
+  let best: Record<number, number> = { ...seed };
+  const cur: number[] = new Array(n).fill(0);
+  let nodes = 0;
+  const NODE_LIMIT = 2_000_000;
+
+  const dfs = (i: number, rem: number[], ap: number) => {
+    if (++nodes > NODE_LIMIT) return;
+    let lb = 0;
+    for (let k = 0; k < rem.length; k++) {
+      if (rem[k] <= 0) continue;
+      if (!isFinite(minRatio[i][k])) return;
+      lb = Math.max(lb, rem[k] * minRatio[i][k]);
+    }
+    if (ap + lb >= bestAp) return; // 정수 AP이므로 같은 값은 갱신 불필요
+    if (lb === 0) {
+      bestAp = ap;
+      best = {};
+      cand.forEach((st, j) => (cur[j] > 0 ? (best[st.number] = cur[j]) : 0));
+      return;
+    }
+    const st = cand[i];
+    const maxRuns = Math.max(0, ...targets.map((c, k) => ((st.yields[c] || 0) > 0 && rem[k] > 0 ? Math.ceil(rem[k] / st.yields[c]) : 0)));
+    if (i === n - 1) {
+      // 마지막 스테이지: 필요한 최소 횟수로 확정
+      cur[i] = maxRuns;
+      const next = rem.map((r, k) => r - maxRuns * (st.yields[targets[k]] || 0));
+      if (next.every((r) => r <= 0)) dfs(n, next, ap + maxRuns * apOf(st));
+      cur[i] = 0;
+      return;
+    }
+    for (let x = maxRuns; x >= 0; x--) {
+      cur[i] = x;
+      dfs(i + 1, rem.map((r, k) => r - x * (st.yields[targets[k]] || 0)), ap + x * apOf(st));
+    }
+    cur[i] = 0;
+  };
+
+  dfs(0, targets.map((c) => need[c]), 0);
+  return best;
 }
